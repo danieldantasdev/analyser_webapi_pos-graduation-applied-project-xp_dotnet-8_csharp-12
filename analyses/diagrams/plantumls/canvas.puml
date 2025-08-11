@@ -1,0 +1,60 @@
+@startmindmap
+* Canvas do Projeto Aplicado – Metodologia de Refatoração de Monólitos Legados
+** Análise de Contexto
+*** Modernização Arquitetural: 80% das organizações mantêm sistemas legados críticos (60% com >10 anos) e enfrentam desafios de manutenção, escala e custo
+*** Desafios da Migração: Migração de monólito para microsserviços é complexa, cara e arriscada (reescrita do sistema, infraestrutura, capacitação), inviável a curto prazo para muitas empresas
+*** Monólito Modular: Abordagem intermediária que combina modularidade com implantação única, prometendo agilidade e manutenibilidade sem migração total
+*** Evidências de Campo: 73% das empresas precisam modernizar monólitos legados, mas só 27% veem microsserviços como solução viável imediata
+*** Principais Causas do Problema:
+**** Acoplamento Excessivo – componentes altamente interdependentes dificultam mudanças isoladas
+**** Falta de Modularização – responsabilidades sem fronteiras claras dentro do sistema
+**** Débito Técnico – anos sem refatoração acumularam código de difícil manutenção
+**** Conhecimento Fragmentado – rotatividade fez perder compreensão da arquitetura original
+**** Pressão por Entrega – foco em novas features sacrificou qualidade arquitetural
+*** Impacto Atual: Sistemas com baixa modularização têm ~40% mais tempo gasto em manutenção e ~60% mais defeitos em produção vs sistemas bem modularizados
+** Personas Alvo
+*** Arquiteto de Software Sênior – (Carlos, 38): Responsável pela arquitetura; busca soluções sustentáveis para legados, teme instabilidade e deseja metodologia eficaz
+*** Gerente de Desenvolvimento – (Ana, 42): Focada em resultados de negócio e produtividade da equipe; precisa justificar investimentos e ver ROI em modernização incremental
+** Benefícios & Justificativas
+*** Técnicos: +Manutenibilidade (módulos claros reduzem complexidade cognitiva); –Acoplamento (interfaces explícitas reduzem dependências); +Coesão (responsabilidades bem definidas melhoram compreensibilidade); +Testabilidade (módulos isolados facilitam testes independentes); Preparação p/ Futuro (monólito modular pode evoluir gradualmente para distribuições maiores)
+*** Econômicos: –Custos de Manutenção (menos tempo em diagnósticos/correções, redução de ~25–40%); +Velocidade de Desenvolvimento (+20–30% na entrega de novas funcionalidades); –Riscos Operacionais (abordagem incremental minimiza downtime e retrabalho); +Produtividade da Equipe (devs gastam menos tempo entendendo código complexo); –Débito Técnico (refatoração contínua evita acúmulo de dívida técnica futura)
+*** Estratégicos: A maioria dos recursos de TI (60–80%) é consumida pela manutenção de legados, deixando apenas 20–40% para inovação. Investir em modernização arquitetural é estratégico; a metodologia oferece caminho evolutivo menos disruptivo que migrar direto para microsserviços, permitindo melhorias contínuas sem riscos e custos extremos.
+** Hipóteses de Pesquisa
+*** H1: Integrar análises multi-perspectiva (domínio, estática, dinâmica, histórica) identifica módulos coesos e fracamente acoplados mais eficazmente que abordagem single-perspective.
+*** H2: Módulos refatorados apresentarão métricas de coesão > 0.7 e acoplamento < 0.3, superiores às do monólito original.
+*** H3: Sistemas refatorados pela metodologia terão ~20–30% de redução no tempo para implementar novas funcionalidades (devido à melhor modularização).
+*** H4: A abordagem incremental permitirá modernização com menos de 5% de downtime, comparado a migrações completas.
+*** H5: Desenvolvedores notarão ~25–40% de melhoria na facilidade de compreensão/manutenção do código após a refatoração.
+*** H6: A metodologia pode ser aplicada com sucesso em monólitos .NET de grande porte (>100k LOC, >3 anos em produção).
+*** H7: O processo completo de refatoração pode ser concluído em ~3–6 meses para sistemas de porte médio (100k–500k LOC).
+*** H8: A metodologia produzirá resultados consistentes mesmo aplicada por equipes diferentes (alta reprodutibilidade esperada).
+** Objetivo SMART
+*** **Specific:** Desenvolver e validar uma metodologia sistemática para refatorar aplicações monolíticas legadas (.NET) em arquitetura de monólito modular, integrando análises de domínio, código estático, comportamento dinâmico e evolução histórica, visando identificar módulos coesos e desacoplados.
+*** **Measurable:** Definir 5 fases claras na metodologia; criar 15 métricas objetivas de qualidade modular; aplicar em 3 sistemas reais (>100k LOC cada); alcançar coesão >0.7 e acoplamento <0.3 nos módulos; reduzir tempo de desenvolvimento de novas features em 20–30%; obter aprovação >4/5 de 80% dos desenvolvedores participantes.
+*** **Achievable:** Objetivo factível pois: há sistemas .NET legados disponíveis para estudo; existem ferramentas de análise estática e dinâmica adequadas; equipe possui conhecimento em arquitetura e refatoração; cronograma de 6 meses é suficiente; recursos computacionais suportam análise de sistemas grandes.
+*** **Relevant:** Objetivo relevante porque atende uma necessidade real da indústria (modernizar legados); preenche lacuna na literatura acadêmica; oferece alternativa prática e menos disruptiva que migração para microsserviços; alinha-se a tendências de modernização incremental sustentável; pode melhorar produtividade e qualidade de software.
+*** **Time-bound:** Prazo definido – Mês 1–2: desenvolver metodologia e ferramentas; Mês 3–4: aplicar no 1º sistema piloto e refinar; Mês 5: aplicar em 2º e 3º sistemas; Mês 6: validar resultados, documentar e apresentar.
+** Premissas e Restrições
+*** Premissas Técnicas: Sistemas-alvo desenvolvidos em .NET (Framework/Core); código-fonte disponível p/ análise estática; logs de execução disponíveis p/ análise dinâmica; histórico de versões acessível; sistemas com ≥3 anos em produção.
+*** Premissas Organizacionais: Organização interessada em modernização arquitetural; equipe de desenvolvimento disponível para colaborar; stakeholders apoiam melhorias técnicas; há orçamento alocado; empresa disposta a abordagem incremental vs reescrita total.
+*** Premissas de Processo: Metodologia será aplicada por profissionais experientes em arquitetura; ferramentas de análise podem rodar no ambiente de dev; testes serão em ambiente de homologação; documentação atual do sistema está disponível; stakeholders participarão de entrevistas e validações.
+*** Restrições Técnicas: Metodologia limitada ao ecossistema .NET; análise dinâmica depende de logs adequados; ferramentas podem ter limitações de performance em sistemas muito grandes; refatoração não pode quebrar APIs públicas existentes; mudanças não podem degradar funcionalidades em produção.
+*** Restrições de Tempo: Projeto deve ser concluído em 6 meses; aplicação da metodologia em cada sistema limitada a ~4–6 semanas; validação de resultados ~2 semanas por sistema; documentação final entregue até o prazo do projeto.
+*** Restrições de Recursos: Equipe limitada (1 arquiteto principal + 2 desenvolvedores); orçamento restrito para ferramentas comerciais; acesso aos sistemas apenas em horário comercial; infraestrutura de dev compartilhada com outras atividades.
+*** Restrições Organizacionais: Mudanças sujeitas à aprovação do comitê de arquitetura; impacto em produção deve ser minimizado; comunicação com stakeholders apenas semanal; documentação deve seguir padrões organizacionais existentes.
+** Backlog de Produto
+*** 6 Épicos Planejados: (1) Análise de Domínio de Negócio; (2) Análise Estática do Código; (3) Análise Dinâmica do Sistema; (4) Análise de Evolução Histórica; (5) Integração & Síntese das Perspectivas; (6) Validação & Documentação.
+*** Histórias de Usuário: Cada épico detalhado em histórias com critérios de aceitação claros, estimativas em pontos e prioridades. *Exemplo:* Épico 1 inclui histórias para identificar contextos delimitados, mapear fluxos de negócio e entrevistar stakeholders.
+*** Priorização Ágil: Backlog priorizado por valor de negócio e dependências técnicas; desenvolvimento organizado em 3 sprints (Sprint 1: épicos 1–2; Sprint 2: épicos 3–4; Sprint 3: épicos 5–6).
+*** Definição de Pronto (DoD): Código implementado e testado; documentação atualizada; validação em pelo menos um sistema piloto; revisão de código aprovada; métricas de qualidade atingindo metas; aprovação do Product Owner.
+** Área de Experimentação (Soluções, Resultados, Lições)
+*** Sprint 1 – Domínio & Estática: Desenvolveu análise de domínio (Event Storming, Context Mapping) e análise estática do código (analyzers Roslyn), estabelecendo as bases da abordagem multi-perspectiva.
+**** Resultados: Identificados 23 contextos de domínio, 47 entidades principais, 31 fluxos de negócio críticos e 15 mapas de contexto. Análise estática processou ~150 mil LOC/sistema, calculou métricas (ex. CBO=12.3, LCOM=0.68) e revelou 15 *God Classes* (>1000 linhas, baixa coesão) e 8 dependências circulares críticas.
+**** Lições: Abordagem multi-perspectiva validada (78% de correlação entre contextos de domínio vs análise estática); ferramentas automatizadas aceleraram a análise (tempo manual reduzido de ~40h para 8h por sistema); engajamento de stakeholders (entrevistas) foi crucial para insights não capturáveis apenas via análise técnica.
+*** Sprint 2 – Dinâmica & Histórica: Implementou monitoramento APM e parser de logs para análise dinâmica, e algoritmos de análise de histórico (co-evolução de commits, identificação de *hotspots*) para análise evolutiva, completando as 4 perspectivas.
+**** Resultados: Análise dinâmica mapeou ~2,3 mi requisições HTTP e ~450 mil chamadas entre componentes, identificando 15 *hot paths* críticos e 23 gargalos de performance. Análise histórica (3,2 anos de Git, ~8400 commits) identificou 89 pares de arquivos com alta co-mudança, 34 *hotspots* críticos priorizados e 12 períodos de instabilidade arquitetural significativa.
+**** Lições: Análises dinâmica e histórica revelaram discrepâncias entre arquitetura documentada vs real (ex.: 23% das comunicações em runtime não apareciam na estrutura estática); combinação de perspectivas permitiu priorizar refatorações (hotspots coincidiram com 78% dos gargalos de performance); ferramentas atingiram critérios de performance (<2h para grandes volumes de dados), porém exigiram otimizações para lidar com logs extensos e sincronização de diferentes fontes de dados.
+*** Sprint 3 – Integração & Validação: Desenvolveu algoritmo de clustering para integrar os resultados das 4 perspectivas e propor modularizações; realizou validação experimental da metodologia completa e preparou documentação final para transferência de conhecimento.
+**** Resultados: Propostas consolidadas de modularização (ex.: 15 módulos para Sistema A; 12 para B; 18 para C), com qualidade média de Coesão=0,74 e Acoplamento=0,28 atingida. Validação controlada (piloto no Sistema A) demonstrou –31% no acoplamento entre componentes refatorados, +28% na coesão interna, –24% no tempo para novas features e +35% na facilidade de compreensão do código. Documentação completa da metodologia entregue (manual de 127 páginas, 15 templates, 8 checklists, 12 exemplos, vídeos tutoriais) para viabilizar aplicação independente.
+**** Lições: Metodologia integrada comprovada eficaz (identificação de módulos com 84% de precisão, F1-Score 0,81; resultados reproduzidos com 91% de consistência entre equipes); alta satisfação dos stakeholders (avaliação geral 4,3/5, 89% pretendem uso futuro) e impactos mensuráveis (onboarding de novos devs –22%; correção de defeitos –18%; velocidade de desenvolvimento +26%; satisfação da equipe +31%). Desafios finais: integração de múltiplas perspectivas exigiu algoritmos sofisticados; variabilidade entre sistemas demandou ajustes de parâmetros; curva de aprendizado para equipes (necessário conhecimento especializado); ferramentas robustas são necessárias para escalar a aplicação.
+@endmindmap

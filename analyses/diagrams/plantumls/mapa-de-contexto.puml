@@ -1,0 +1,46 @@
+@startuml
+' POEMS – Análise de Contexto do Problema
+skinparam monochrome true
+
+package "People (Pessoas)" {
+  [Arquiteto de Software Sênior\n(Carlos Eduardo Silva)]
+  [Gerente de Desenvolvimento\n(Ana Beatriz Monteiro)]
+  [Equipe de Desenvolvimento]
+  [Stakeholders Executivos]
+}
+
+package "Objectives (Objetivos)" {
+  [Modernizar arquitetura sem grande risco]
+  [Reduzir custos de manutenção em 25%]
+  [Aumentar velocidade de entrega em 30%]
+}
+
+package "Environment (Ambiente)" {
+  [Sistemas .NET legados (>5 anos)]
+  [Infraestrutura híbrida (On-Premise + Cloud)]
+  [CI/CD via Azure DevOps]
+  [Ferramentas de análise estática e dinâmica]
+}
+
+package "Messages (Mensagens)" {
+  ["Refatoração incremental é viável"]
+  ["Monólito modular reduz riscos"]
+  ["Métricas objetivas comprovam ROI"]
+}
+
+package "Services (Serviços)" {
+  [Análise estática com Roslyn Analyzer]
+  [Monitoramento APM e parsing de logs]
+  [Algoritmos de clustering para modularização]
+}
+
+' Definindo relações para maior clareza
+[Arquiteto de Software Sênior\n(Carlos Eduardo Silva)] --> [Modernizar arquitetura sem grande risco]
+[Gerente de Desenvolvimento\n(Ana Beatriz Monteiro)] --> [Reduzir custos de manutenção em 25%]
+[Equipe de Desenvolvimento] --> [Sistemas .NET legados (>5 anos)]
+[Stakeholders Executivos] --> ["Métricas objetivas comprovam ROI"]
+[Análise estática com Roslyn Analyzer] --> [Modernizar arquitetura sem grande risco]
+[Monitoramento APM e parsing de logs] --> [Aumentar velocidade de entrega em 30%]
+[Algoritmos de clustering para modularização] --> [Reduzir custos de manutenção em 25%]
+
+@enduml

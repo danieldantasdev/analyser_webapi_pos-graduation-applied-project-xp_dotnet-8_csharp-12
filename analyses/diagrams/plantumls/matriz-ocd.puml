@@ -1,0 +1,24 @@
+@startmindmap
+* Matriz CSD – Certezas, Suposições e Dúvidas
+** Certezas (O que sabemos)
+*** Sistemas monolíticos legados de grande porte são comuns (≈80% das org.) e muitos têm >10 anos em operação 
+*** Baixa modularização correlaciona-se a maior esforço de manutenção (+40%) e mais defeitos (+60%) em produção
+*** Migrar totalmente para microsserviços é caro e arriscado; nem todas as empresas conseguem (exige reescrita completa, infra robusta)
+*** Arquitetura de monólito modular pode melhorar manutenibilidade e agilidade mantendo implantação única
+*** Diferentes perspectivas de análise (domínio, estática, dinâmica, histórica) capturam aspectos complementares do sistema
+** Suposições (O que acreditamos)
+*** Integrar múltiplas perspectivas de análise identificará módulos de melhor qualidade do que análise isolada (Hipótese H1)
+*** Módulos identificados terão alta coesão (>0.7) e baixo acoplamento (<0.3) após a refatoração (H2)
+*** Refatoração modular reduzirá ~20–30% do tempo para novas funcionalidades (H3)
+*** Abordagem incremental de refatoração limitará downtime a <5% (H4)
+*** Código refatorado será significativamente mais fácil de compreender/manter (~30% de melhoria percebida, H5)
+*** A metodologia será aplicável em sistemas .NET de grande porte (>100k LOC, H6) e concluída em até 6 meses (H7)
+*** Os resultados serão consistentes e reproduzíveis mesmo com equipes diferentes (H8)
+** Dúvidas (O que precisamos verificar)
+*** Sistemas excessivamente acoplados terão módulos naturais identificáveis? (Risco: alguns monólitos podem não ter separações claras)
+*** Haverá apoio organizacional para a refatoração? (Risco de resistência cultural a mudanças arquiteturais)
+*** Os dados disponíveis (logs, histórico) serão suficientes e confiáveis? (Qualidade/consistência dos logs pode limitar a análise dinâmica)
+*** A metodologia escalará para sistemas muito grandes ou fora do ecossistema .NET? (Limitações de performance e escopo tecnológico)
+*** Conseguiremos comprovar claramente o ROI para justificar o projeto? (Dúvida se benefícios medidos convencerão stakeholders)
+*** Como integrar eficazmente os resultados de análises tão distintas? (Desafio de integração multi-perspectiva exigindo algoritmos avançados)
+@endmindmap

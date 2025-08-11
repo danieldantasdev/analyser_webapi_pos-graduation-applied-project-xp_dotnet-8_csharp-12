@@ -1,0 +1,22 @@
+@startmindmap
+* Persona: Carlos Eduardo Silva – Arquiteto de Software Sênior
+** Perfil Demográfico
+*** Idade: 38 anos
+*** Empresa: Médio porte (setor financeiro)
+*** Experiência: 15 anos em desenvolvimento, 8 anos em arquitetura
+** Perfil Comportamental
+*** Meticuloso e orientado a detalhes
+*** Busca soluções embasadas em evidências
+*** Preocupado com sustentabilidade técnica a longo prazo
+*** Cauteloso com mudanças disruptivas
+** Metas (Objetivos)
+*** Garantir a sustentabilidade técnica de longo prazo dos sistemas legados
+*** Equilibrar entregas rápidas de valor com manutenção da qualidade técnica
+*** Tomar decisões arquiteturais seguras que não prejudiquem a organização
+*** Ver melhorias mensuráveis na qualidade do código dos sistemas legados
+** Frustrações
+*** Pressão para entregar valor rapidamente com recursos limitados
+*** Falta de metodologia clara para guiar a refatoração do monólito
+*** Medo de causar instabilidade em sistemas críticos durante mudanças
+*** Dificuldade em obter investimento para melhorias arquiteturais
+@endmindmap

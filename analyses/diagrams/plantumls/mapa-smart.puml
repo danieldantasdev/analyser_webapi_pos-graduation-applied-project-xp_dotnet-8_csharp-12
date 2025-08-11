@@ -1,0 +1,47 @@
+@startmindmap
+* Objetivo SMART – Metodologia de Refatoração de Monólitos
+** Específico (Specific)
+*** Desenvolver e validar metodologia sistemática
+*** Integrar análises de domínio, estática, dinâmica e histórica
+*** Focar em módulos coesos e fracamente acoplados
+** Mensurável (Measurable)
+*** 5 fases bem definidas e documentadas
+*** 15 métricas objetivas de qualidade modular
+*** 3 sistemas reais (> 100k LOC) analisados
+*** Coesão ≥ 0.7 e Acoplamento < 0.3
+*** Redução de 20–30% no tempo de novas features
+*** ≥ 4.0/5.0 de avaliação positiva em 80% dos devs
+** Atingível (Achievable)
+*** Sistemas .NET disponíveis para estudo
+*** Ferramentas estática e dinâmica maduras
+*** Equipe com expertise em arquitetura e refatoração
+*** Cronograma de 6 meses
+*** Recursos computacionais adequados
+** Relevante (Relevant)
+*** Atende demanda real de modernização de legados
+*** Preenche lacuna na literatura acadêmica
+*** Alternativa menos disruptiva que microsserviços
+*** Alinha-se a tendências de modernização incremental
+*** Impacto em produtividade e qualidade de software
+** Temporal (Time-bound)
+*** Mês 1–2: Desenvolvimento da metodologia e ferramentas
+*** Mês 3–4: Pilotagem e refinamentos no 1º sistema
+*** Mês 5: Aplicação no 2º e 3º sistemas
+*** Mês 6: Validação, documentação e apresentação
+** Indicadores de Sucesso
+*** Técnicos
+**** Processo de 5 fases documentado
+**** Ferramentas implementadas e operacionais
+**** Métricas atingindo targets
+**** Módulos com interfaces bem definidas
+*** Processo
+**** Cronograma cumprido
+**** Aplicação em 3 sistemas distintos
+**** Reprodutibilidade comprovada
+**** Documentação completa
+*** Impacto
+**** Aumento de produtividade
+**** Redução no tempo de manutenção
+**** Satisfação da equipe
+**** Preparação para evolução futura
+@endmindmap

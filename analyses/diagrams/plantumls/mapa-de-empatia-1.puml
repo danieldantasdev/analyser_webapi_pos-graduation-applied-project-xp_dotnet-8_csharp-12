@@ -1,0 +1,33 @@
+@startmindmap
+* Mapa de Empatia - Arquiteto de Software Sênior (Persona 1)
+** Pensa & Sente
+*** Preocupação constante com a sustentabilidade dos sistemas legados
+*** Frustração com a pressão por entregas rápidas vs qualidade técnica
+*** Ansiedade sobre decisões arquiteturais que possam impactar negativamente a organização
+*** Satisfação ao ver melhorias mensuráveis na qualidade do código
+** Escuta
+*** Pressão da diretoria por modernização tecnológica
+*** Reclamações da equipe de dev sobre dificuldades de manutenção
+*** Discussões sobre migração para microsserviços em conferências e comunidades
+*** Relatos de sucesso e fracasso de outras organizações
+** Vê
+*** Código legado complexo e difícil de manter
+*** Equipes gastando tempo excessivo em correções e debugging
+*** Concorrentes adotando arquiteturas mais modernas
+*** Novas ferramentas e metodologias emergentes para modernização
+** Fala & Faz
+*** Defende a necessidade de refatoração arquitetural do monólito
+*** Busca metodologias comprovadas para modernização
+*** Participa de comunidades técnicas e conferências
+*** Documenta decisões arquiteturais e suas justificativas
+** Dores (Medos & Frustrações)
+*** Medo de introduzir instabilidade em sistemas críticos
+*** Frustração com a falta de metodologias claras para refatoração
+*** Obstáculos orçamentários para grandes projetos de modernização
+*** Resistência organizacional a mudanças arquiteturais
+** Ganhos (Necessidades)
+*** Metodologia sistemática e comprovada para refatoração
+*** Ferramentas para análise e avaliação de arquiteturas existentes
+*** Métricas objetivas para medir progresso e qualidade
+*** Abordagem incremental que minimize riscos na modernização
+@endmindmap

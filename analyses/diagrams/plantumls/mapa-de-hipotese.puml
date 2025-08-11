@@ -1,0 +1,17 @@
+@startuml
+skinparam class {
+  BackgroundColor Snow
+  BorderColor Black
+  ArrowColor Black
+  FontName Arial
+}
+
+class "Prioridade de Hipóteses" as Tabela {
+  | Observação         | Descrição da Hipótese                                                                                                                             | G | U | T | Somatório | Priorização | Grau de Risco |
+  |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|---|---|---|-----------|-------------|---------------|
+  | Cenário observado  | H1: Integração multi-perspectiva identifica módulos mais coesos e fracamente acoplados                                                               | 5 | 5 | 5 | 15        | Alta        | Alto          |
+  | Cenário observado  | H2: Módulos apresentarão coesão >0.7 e acoplamento <0.3                                                                                             | 4 | 4 | 4 | 12        | Média       | Médio         |
+  | Cenário observado  | H3: Redução de 20–30% no tempo de novas funcionalidades por conta da modularização                                                                   | 4 | 3 | 3 | 10        | Média       | Médio         |
+}
+
+@enduml

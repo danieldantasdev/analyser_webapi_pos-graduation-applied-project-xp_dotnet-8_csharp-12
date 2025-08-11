@@ -1,0 +1,35 @@
+@startmindmap
+* Canvas de Proposta de Valor
+** Perfil do Cliente
+*** Tarefas do Cliente
+**** Manter sistemas legados operando
+**** Desenvolver novas funcionalidades de negócio
+**** Modernizar a arquitetura sem interromper operações
+**** Reduzir custos de manutenção de TI
+*** Dores do Cliente
+**** Sistemas legados difíceis de manter e evoluir
+**** Alto custo operacional contínuo na manutenção
+**** Risco elevado em projetos de migração completos
+**** Falta de metodologia clara para modernização
+*** Ganhos do Cliente
+**** Maior agilidade na entrega de valor ao negócio
+**** Menor custo operacional/manutenção no longo prazo
+**** Redução de riscos na modernização incremental
+**** Maior capacidade de inovar sobre sistemas existentes
+** Proposta de Valor
+*** Produtos & Serviços
+**** Metodologia sistemática de refatoração de monólitos
+**** Ferramentas de análise automatizada de código
+**** Métricas objetivas de qualidade arquitetural
+**** Processo estruturado em fases definido
+*** Aliviadores de Dor
+**** Redução da complexidade do sistema legado
+**** Diminuição dos riscos de falha na modernização
+**** Abordagem incremental com mínimo downtime
+**** ROI mensurável para justificar investimentos
+*** Criadores de Ganho
+**** Melhoria da produtividade da equipe de desenvolvimento
+**** Redução de custos de manutenção e operação
+**** Preparação para evolução futura da arquitetura
+**** Aumento da qualidade técnica e robustez do sistema
+@endmindmap
